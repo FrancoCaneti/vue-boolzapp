@@ -20,13 +20,39 @@ body{
     height:90%;
     background:white;
 }
-
-.side{
+/*CONTACTS*/
+.user{
     flex-basis: 35%;
     background: white;
 }
+.user-header{
+    padding:26px;
+    background:#f0f0f0;
+    border-bottom:1px solid rgb(211 211 211);
+    border-right:1px solid rgb(211 211 211);
+}
+.notification{
+    padding:26px;
+    background: rgb(32, 173, 216);
+}
+.search-bar{
+    padding:10px;
+    background: silver;
+}
+.contacts{
+    flex-grow: 1;
+    overflow-y: auto;  
+}
+.contact{
+    padding: 26px;
+    margin: 1px;
+    background: rgb(243 244 246);
+}
 
-/*Content */
+
+
+
+/*Chat */
 
 .chat{
     flex-basis: 65%;
