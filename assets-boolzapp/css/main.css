@@ -25,28 +25,58 @@ body{
     flex-basis: 35%;
     background: white;
 }
+
 .user-header{
-    padding:26px;
+    padding:26px 5px;
     background:#f0f0f0;
     border-bottom:1px solid rgb(211 211 211);
     border-right:1px solid rgb(211 211 211);
+    display: flex;
+   justify-content: flex-start;
 }
+
+
+.image-user{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 25px 15px 20px;
+    
+    border-radius: 50%;
+    margin-right: 10px;
+    background-image: url(../img/avatar_2.jpg);
+    background-size: 100%;
+}
+
+
+.ul-user{
+    list-style: none;
+    margin-left: 100px;
+}
+.li-user{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+
+/*notification*/
 .notification{
     padding:26px;
     background: rgb(32, 173, 216);
 }
+
 .search-bar{
     padding:10px;
     background: silver;
 }
+
 .contacts{
     flex-grow: 1;
     overflow-y: auto;  
 }
+
 .contact{
     padding: 26px;
-    margin: 1px;
     background: rgb(243 244 246);
+    border-bottom: 1px solid rgb(211 211 211);
 }
 
 
@@ -66,12 +96,14 @@ body{
     padding:26px;
     background:#f0f0f0;
 }
+
 .chat-main{
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
 }
+
 .chat-main p{
     margin-bottom: 20px;
 }
