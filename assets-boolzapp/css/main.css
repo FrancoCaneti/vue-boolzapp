@@ -27,7 +27,7 @@ body{
 }
 
 .user-header{
-    padding:26px 5px;
+    padding:24px 5px;
     background:#f0f0f0;
     border-bottom:1px solid rgb(211 211 211);
     border-right:1px solid rgb(211 211 211);
@@ -59,22 +59,33 @@ body{
 
 /*notification*/
 .notification{
-    padding:26px;
+    padding:20px 5px;
     background: rgb(32, 173, 216);
+    display: flex;
+    justify-content: flex-start;
 }
 
+.notice{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px 10px 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+/*serach bar*/
 .search-bar{
     padding:10px;
     background: silver;
 }
-
+/*contacts*/
 .contacts{
     flex-grow: 1;
     overflow-y: auto;  
 }
 
 .contact{
-    padding: 26px;
+    padding: 23px 5px;
     background: rgb(243 244 246);
     border-bottom: 1px solid rgb(211 211 211);
 }
