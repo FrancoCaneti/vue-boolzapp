@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        yourPropNameHere: [
+        arraycontact: [
             {
                 name: 'Michele',
                 avatar: '_1',
