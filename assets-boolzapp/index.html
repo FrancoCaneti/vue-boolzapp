@@ -71,22 +71,11 @@
         </section>
         <!--Main Contact-->
         <section class="contacts">
-            <div class="contact">
-              <img class="img-contact" src="./img/avatar_3.jpg" alt=""> 
-                 <h3 class="name-contact">Michele</h3> 
+            <div class="contact" v-for="contact in arraycontact">
+              <img class="img-contact" src="" alt=""> 
+                 <h3 class="name-contact">{{contact.name}}</h3> 
             </div>
-            <div class="contact">
-                <img class="img-contact" src="./img/avatar_6.jpg" alt=""> 
-                   <h3 class="name-contact">Fabio</h3> 
-              </div>
-              <div class="contact">
-                <img class="img-contact" src="./img/avatar_8.jpg" alt=""> 
-                   <h3 class="name-contact">Samuele</h3> 
-              </div>
-              <div class="contact">
-                <img class="img-contact" src="./img/avatar_io.jpg" alt=""> 
-                   <h3 class="name-contact">Elisa</h3> 
-              </div>
+            
             
         </section>
       </aside>
@@ -146,6 +135,6 @@
 
 
     <!--Js-->
-    <script src="./contatti.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
