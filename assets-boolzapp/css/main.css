@@ -48,7 +48,7 @@ body{
 
 .ul-user{
     list-style: none;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 .li-user{
     display: inline-block;
@@ -88,9 +88,27 @@ i{
 }
 /*serach bar*/
 .search-bar{
-    padding:10px;
-    background: silver;
+    padding:5px;
+    background-color: rgb(158 158 158 / 8%);
+    display: flex;
 }
+
+.search-buttom{
+    width: 15%;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    background: rgb(255, 255, 255);
+}
+
+.search{
+    width: 84%;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+
 /*contacts*/
 .contacts{
     flex-grow: 1;
@@ -185,7 +203,7 @@ i{
  }
 
  .new-messagge{
-     width:75%;
+     width:80%;
      padding:10px;
      border-radius: 5px;
      border: none;
