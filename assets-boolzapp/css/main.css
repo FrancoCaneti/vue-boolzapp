@@ -138,8 +138,7 @@ i{
 
 /*header*/
 
-.chat-header,
-.chat-footer{
+.chat-header{
     padding:26px;
     background:#f0f0f0;
     display: flex;
@@ -172,5 +171,28 @@ i{
     display: inline-block;
     padding: 10px 
  }
+
+
+ /*Chat FOOTER*/
+
+ .chat-footer{
+    padding: 10px;
+    background:#f0f0f0;
+    display: flex;
+    justify-content: flex-start;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .new-messagge{
+     width:75%;
+     padding:10px;
+     border-radius: 5px;
+     border: none;
+ }
+ .f-i{
+     padding:10px 25px;
+ }
+
 
 
