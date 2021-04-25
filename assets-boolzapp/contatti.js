@@ -1,4 +1,8 @@
 // Elenco contatti
+
+const app = new Vue ({
+    el:'#app',
+    data: {
 yourPropNameHere: [
     {
         name: 'Michele',
