@@ -70,7 +70,7 @@ i{
 
 .notice{
     background-color: rgb(255, 255, 255);
-    padding: 10px 15px 10px 15px;
+    padding: 10px 12px 10px 12px;
     border-radius: 50%;
     margin-right: 10px;
     margin-left: 10px;
@@ -167,16 +167,19 @@ i{
     padding:10px;
 }
 
+/*Chat*/
 
 .chat-main{
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-main p{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
  .ul-header{
@@ -189,6 +192,39 @@ i{
     display: inline-block;
     padding: 10px 
  }
+
+ /*MESSAGGES*/
+
+ .sent{
+    width: auto;
+    background: #DCF8C6;
+    margin-left: 470px;
+    margin-right: 50px;
+    padding: 5px 15px 0px 10px;
+    border-radius: 5px;
+   
+}
+ 
+ .received{
+    margin-right:470px ;
+    margin-left:50px ;
+    width:auto;
+    background: #ffffff;
+    padding: 5px 15px 0px 10px;
+    border-radius: 5px;
+   
+ }
+ .testo{
+   
+    margin:5px 0px 5px 2px;
+    max-width: 200px;
+ }
+ .date{
+     font-size: 10px;
+     text-align: end;
+ }
+ 
+ 
 
 
  /*Chat FOOTER*/
