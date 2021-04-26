@@ -1,6 +1,11 @@
 const app = new Vue({
     el: '#app',
     data: {
+        //Utente / io
+       user:{
+               name:'Franco',
+               avatar:'_8',
+       },
         arraycontact: [
             {
                 name: 'Michele',
