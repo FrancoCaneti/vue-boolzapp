@@ -109,7 +109,7 @@ const app = new Vue({
             if(this.newMessage !== '') {
                 this.arraycontact[activeContact].messages.push({
 
-                    text: this.newMessage,
+                    message: this.newMessage,
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     status:'sent',
                 });

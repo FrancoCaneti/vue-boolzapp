@@ -111,11 +111,11 @@
           <!--Messagges-->
             <section class="chat-main">
                 <div class="sent"
-                  v-for="message in arraycontact[activeContact].messages"
-                  :class="message.status">
+                  v-for="item in arraycontact[activeContact].messages"
+                  :class="item.status">
 
-                    <p class="testo">{{message.message}}</p>
-                    <p class="date">{{message.date}}</p>
+                    <p class="testo">{{item.message}}</p>
+                    <p class="date">{{item.date}}</p>
                 </div>
             </section>
       <!--Chat Footer-->
