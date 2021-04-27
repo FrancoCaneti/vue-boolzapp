@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         //Utente / io
-       user:{
+       user:{ 
                name:'Franco',
                avatar:'_8',
        },
@@ -90,6 +90,18 @@ const app = new Vue({
                     }
                 ],
             },
-        ],
+        ], 
+      
+        activeContact:0
+    },
+    methods: {
+        setActiveContact(index) {
+            console.log(index);
+
+            this.activeContact = index;
+
+            console.log(this.arraycontact[this.activeContact]);
+        }
     }
+   
 });

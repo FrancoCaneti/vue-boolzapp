@@ -81,7 +81,7 @@ i{
 .li-not:nth-child(3){
     margin-top: 3px;
 }
-/*serach bar*/
+/*search bar*/
 .search-bar{
     padding:5px;
     background-color: rgb(158 158 158 / 8%);
@@ -191,13 +191,14 @@ i{
     padding: 10px 
  }
 
- /*MESSAGGES*/
+ /*MESSAGES*/
 
  .sent{
     width: auto;
     background: #DCF8C6;
     margin-left: 470px;
     margin-right: 50px;
+    margin-bottom: 10px;
     padding: 5px 15px 0px 10px;
     border-radius: 5px;
    
@@ -221,9 +222,6 @@ i{
      font-size: 10px;
      text-align: end;
  }
- 
- 
-
 
  /*Chat FOOTER*/
 

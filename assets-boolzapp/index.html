@@ -69,7 +69,9 @@
         </section>
         <!--Main Contact-->
         <section class="contacts">
-            <div class="contact" v-for="contact in arraycontact">
+            <div class="contact" v-for="(contact, index) in arraycontact"
+             @click="setActiveContact(index)"
+             :class="{active: index === activeContact}">
               <img class="img-contact" :src="'./img/avatar' + contact.avatar + '.jpg'" :alt="contact.name"> 
                  <h3 class="name-contact">{{contact.name}}</h3> 
             </div>
@@ -84,11 +86,11 @@
           <!--Chat header-->
             <section class="chat-header">
                 <div>
-                    <img class="img-contact" src="./img/avatar_3.jpg" alt=""> 
+                    <img class="img-contact" :src="`./img/avatar${arraycontact[activeContact].avatar}.jpg`" alt=""> 
                </div>
                <ul class="ul-not">
                  <li class="li-not">
-                    <h4>Michele</h4>
+                    <h4> {{arraycontact[activeContact].name}}</h4>
                  </li>
                  <li class="li-not">
                    <h6>Ultimo Accesso oggi alle 15:53</h6>
@@ -108,14 +110,12 @@
             </section>
           <!--Messagges-->
             <section class="chat-main">
-                <div class="sent">
-                    <p class="testo">Messaggio</p>
-                    <p class="date">24/04/2021</p>
-                </div>
+                <div class="sent"
+                  v-for="message in arraycontact[activeContact].messages"
+                  :class="message.status">
 
-                <div class="received">
-                    <p class="testo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo quibusdam, sequi laboriosam minima corporis eius hic accusantium rerum veniam praesentium voluptate quos cupiditate? Similique doloribus fugiat modi dolores nostrum.</p>
-                    <p class="date">26/04/2021</p>
+                    <p class="testo">{{message.message}}</p>
+                    <p class="date">{{message.date}}</p>
                 </div>
             </section>
       <!--Chat Footer-->
