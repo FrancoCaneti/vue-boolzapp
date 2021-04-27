@@ -92,7 +92,8 @@ const app = new Vue({
             },
         ], 
       
-        activeContact:0
+        activeContact:0,
+        newMessage: '',
     },
     methods: {
         setActiveContact(index) {
@@ -101,7 +102,21 @@ const app = new Vue({
             this.activeContact = index;
 
             console.log(this.arraycontact[this.activeContact]);
-        }
-    }
+        }, 
+        addMessage(activeContact) {
+            console.log('add new message');
+
+            if(this.newMessage !== '') {
+                this.arraycontact[activeContact].messages.push({
+
+                    text: this.newMessage,
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    status:'sent',
+                });
+               this.newMessage = '';
+               this.$refs.messageInput.focus();
+            }
+        } 
+    },
    
 });

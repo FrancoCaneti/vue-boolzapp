@@ -44,9 +44,9 @@
         <!--Notifications-->
         <section class="notification">
             <div>
-                <box class="notice">
+                <div class="notice">
                     <i class="fas  fa-bell-slash bell"></i>
-                </box> 
+                </div> 
            </div>
            <ul class="ul-not">
                <li class="li-not">
@@ -121,8 +121,14 @@
       <!--Chat Footer-->
             <section class="chat-footer">
                 <i class="far fa-smile f-i "></i>
-                  <input  class="new-messagge" type="text" 
-                   placeholder="Inserisci un elemento"/>
+
+                  <input  class="new-message"
+                   v-model.trim="newMessage"
+                   @keyup.enter="addMessage(activeContact)"
+                   type="text" 
+                   placeholder="Inserisci un nuovo messaggio"
+                   ref="messageInput"/>
+
                 <i class="fas fa-microphone f-i"></i>
             </section>
         </main>
@@ -131,7 +137,8 @@
 
 
 
-
+    <!--day js-->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
     <!--Js-->
     <script src="./script.js"></script>
 </body>
