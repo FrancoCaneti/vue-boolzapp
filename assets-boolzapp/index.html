@@ -62,18 +62,29 @@
         <!--Search Bar-->
         <section class="search-bar">
             <button class="search-buttom">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search">
+                    <a href="#"></a>
+                </i>
             </button>
-            <input class="search" type="search"placeholder="Cerca o inzia una nuova chat" >
+            <input class="search" 
+            type="text" 
+            placeholder="Cerca o inzia una nuova chat"
+             v-model="searchContact" 
+             @keyup="search">
+           
             
         </section>
         <!--Main Contact-->
         <section class="contacts">
-            <div class="contact" v-for="(contact, index) in arraycontact"
+            <div class="contact" 
+            v-for="(element,contact, index) in arraycontact"
              @click="setActiveContact(index)"
-             :class="{active: index === activeContact}">
-              <img class="img-contact" :src="'./img/avatar' + contact.avatar + '.jpg'" :alt="contact.name"> 
-                 <h3 class="name-contact">{{contact.name}}</h3> 
+             :class="{active: index === activeContact}"
+             v-if="element.visible "
+            >
+
+              <img class="img-contact" :src="'./img/avatar' + element.avatar + '.jpg'" :alt="contact.name"> 
+                 <h3 class="name-contact">{{element.name}}</h3> 
             </div>
             
             
@@ -136,7 +147,7 @@
 
 
 
-
+  
     <!--day js-->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
     <!--Js-->

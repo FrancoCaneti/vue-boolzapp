@@ -94,6 +94,8 @@ const app = new Vue({
       
         activeContact:0,
         newMessage: '',
+        searchContact:'',
+        visible: true,
     },
     methods: {
         setActiveContact(index) {
@@ -107,7 +109,7 @@ const app = new Vue({
             console.log('add new message');
 
             if(this.newMessage !== '') {
-                this.arraycontact[activeContact].messages.push({
+                this.arraycontact[this.activeContact].messages.push({
 
                     message: this.newMessage,
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
@@ -124,7 +126,21 @@ const app = new Vue({
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 });
             }, 1000);
-        } 
-    },
+        } ,
+        search(){
+            
+            this.arraycontact.forEach((element) => {
+
+                let nameContact = this.searchContact.toLowerCase().trim();
+
+               if(!element.name.toLowerCase().trim().includes(nameContact)){
+                   console.log(element.visible)
+                   element.visible = false
+               } else {
+                  // element.visible = true;
+               };
+            })
+        },
+    }, 
    
 });
