@@ -77,14 +77,13 @@
         <!--Main Contact-->
         <section class="contacts">
             <div class="contact" 
-            v-for="(element,contact, index) in arraycontact"
+            v-for="(contact, index) in arraycontact"
              @click="setActiveContact(index)"
              :class="{active: index === activeContact}"
-             v-if="element.visible "
-            >
+             v-show="contact.visible">
 
-              <img class="img-contact" :src="'./img/avatar' + element.avatar + '.jpg'" :alt="contact.name"> 
-                 <h3 class="name-contact">{{element.name}}</h3> 
+              <img class="img-contact" :src="'./img/avatar' + contact.avatar + '.jpg'" :alt="contact.name"> 
+                 <h3 class="name-contact">{{contact.name}}</h3> 
             </div>
             
             
@@ -154,3 +153,4 @@
     <script src="./script.js"></script>
 </body>
 </html>
+

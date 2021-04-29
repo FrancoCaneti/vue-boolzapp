@@ -137,7 +137,7 @@ const app = new Vue({
                    console.log(element.visible)
                    element.visible = false
                } else {
-                  // element.visible = true;
+                   element.visible = true;
                };
             })
         },
